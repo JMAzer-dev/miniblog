@@ -1,6 +1,6 @@
 /* Global */
 
-*{
+body {
   background-color: #f6fcff;
   padding: 0;
   margin: 0;
@@ -101,7 +101,7 @@ textarea {
   color: #fff;
 }
 
-.btn.btn.btn-outline:hover {
+.btn.btn-outline:hover {
   background-color: #000;
 }
 
