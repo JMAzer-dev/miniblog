@@ -15,7 +15,7 @@ const Register = () => {
   //renomeando o error que vai chegar do backend, junto com as outras funções do servidor
   const { createUser, error: authError, loading } = useAuthenticantion();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, token) => {
     e.preventDefault();
 
     setError("");
@@ -24,6 +24,7 @@ const Register = () => {
       displayName,
       email,
       password,
+      token
     };
 
     if (password !== confirmPassword) {
@@ -98,7 +99,13 @@ const Register = () => {
           />
         </label>
         {!loading && (
-          <button className="btn" type="submit">
+          <button
+            className="btn g-recaptcha"
+            data-sitekey="6LeMLQMhAAAAAHlPWljR1vioKlevpcRduLbtqwPg"
+            data-callback="handleSubmit"
+            data-action="submit"
+            type="submit"
+          >
             Cadastrar
           </button>
         )}

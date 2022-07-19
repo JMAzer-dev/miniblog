@@ -1,6 +1,4 @@
 //firebase
-import { db } from '../firebase/Config'
-import { async } from '@firebase/util'
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -11,7 +9,6 @@ import {
 
 //hooks
 import { useState, useEffect } from 'react'
-import { Navigate } from 'react-router-dom'
 
 export const useAuthenticantion = () => {
     const [error, setError] = useState(null)
