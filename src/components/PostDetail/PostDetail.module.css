@@ -1,15 +1,21 @@
 .post_detail {
     margin-bottom: 2em;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+
 }
 .post_detail img {
-    max-width: 600px;
+    max-width: 300px;
 }
+
 .post_detail h2 {
     margin-bottom: .4em;
 }
 .post_detail .tags {
     margin-bottom: 1.2em;
     display: flex;
+    flex-wrap: wrap;
 } 
 .tags p {
     margin-right: .5em;
@@ -24,4 +30,13 @@
     color: #444;
     font-size: .8em;
     margin-bottom: 1em;
+}
+
+@media(min-width: 640px){
+    .post_detail img {
+        max-width: 600px;
+    }
+    .post_detail {
+        max-width: 600px;
+    }
 }

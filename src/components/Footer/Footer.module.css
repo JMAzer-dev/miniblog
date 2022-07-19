@@ -1,8 +1,21 @@
 .footer{
-    height: 250px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #edf3f6;
+}
+.footer h3{
+    font-size: .8em;
+}
+
+
+@media(min-width: 640px){
+    .footer{
+        height: 250px;
+    }
+    .footer h3{
+        font-size: 1.2em;
+    }
 }

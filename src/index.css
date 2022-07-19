@@ -45,7 +45,7 @@ nav button:hover {
 /* form styles */
 
 form {
-  max-width: 40%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -119,4 +119,10 @@ button[disabled] {
   border: 1px solid #f5c6cb;
   padding: 5px;
   border-radius: 5px;
+}
+
+@media(min-width: 640px){
+  form{
+    width: 40%;
+  }
 }

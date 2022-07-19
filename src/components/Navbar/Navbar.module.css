@@ -1,29 +1,133 @@
-.navbar{
-    display: flex;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 0px;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5em 2em;
+.cont {
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+}
+
+.navbar {
+  transition-timing-function: cubic-bezier();
+  transition: .6s;
+  display: flex;
+  background: #edf3f6;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 10px 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  margin: 0 auto;
 }
 
 .brand {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
-.brand span{
-    font-weight: 900;
-    text-transform: uppercase;
+.brand span {
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .link_list {
-    display: flex;
-    list-style: none;
+  display: none;
+  list-style: none;
 }
 
 .link_list li {
-    margin-right: 1em;
+  margin-left: 1em;
 }
 
-.link_list li a{
-    padding: .4em .6em;
+.link_list li a {
+  padding: 0.4em 0.6em;
+}
+
+.link_list_close {
+  display: flex;
+  transition: .6s;
+  transition-timing-function: cubic-bezier();
+  flex-direction: column;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: -400%;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  text-align: center;
+  color: white;
+  list-style: none;
+}
+
+.link_list_close li {
+  padding: 1em;
+  font-size: 1.2em;
+}
+.link_list_close li a {
+  color: white;
+}
+.link_list_close button {
+  color: white;
+}
+.link_list_close li:hover {
+  color: rgb(223, 223, 223);
+}
+
+.link_list_menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: -30;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.711);
+  text-align: center;
+  color: white;
+  transition-timing-function: cubic-bezier();
+  transition: .6s;
+  list-style: none;
+}
+
+.link_list_menu li {
+  padding: 1em;
+  font-size: 1.2em;
+}
+.link_list_menu li a {
+  color: white;
+}
+.link_list_menu button {
+  color: white;
+}
+.link_list_menu li:hover {
+  color: rgb(223, 223, 223);
+}
+.open_menu {
+  display: block;
+  z-index: 10;
+  color: black;
+}
+.close_menu {
+  display: block;
+  z-index: 10;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  .link_list {
+    display: flex;
+  }
+  .link_list_menu {
+    display: none;
+  }
+  .open_menu {
+    display: none;
+  }
 }

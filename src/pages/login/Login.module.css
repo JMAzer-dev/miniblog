@@ -1,8 +1,11 @@
 .login{
     text-align: center;
+    margin-top: 120px;
+
 }
 
 .login p {
     color:  #aaa;
     padding-bottom: 2em;
+    margin: 0 2em;
 }

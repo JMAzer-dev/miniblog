@@ -18,3 +18,12 @@
 .tags span {
     font-weight: bold;
 }
+
+.post_container img {
+    width: 80%;
+}
+@media(min-width: 640px){
+    .post_container img {
+        width: 60%;
+    }
+}
